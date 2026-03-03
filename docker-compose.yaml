@@ -1,0 +1,12 @@
+version: '3'
+services:
+  pyspark-lab:
+    image: quay.io/jupyter/pyspark-notebook:latest
+    container_name: my-pyspark-container
+    user: root
+    volumes:
+      - ./:/home/jovyan/work
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+      - "8080:8080"
